@@ -309,4 +309,4 @@ function App() {
 
 - It should not prevent you from seeing red screen errors.
 
-- Hiding the launch screen is configurable: fade it out with a custom duration or hide it without any animation at all (no fade needed if you want to animate it out!).
+- Hiding the launch screen is configurable: fade it out or hide it without any animation at all (no fade needed if you want to animate it out!).
