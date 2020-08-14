@@ -135,10 +135,10 @@ android/app/src/main/res/mipmap-xhdpi/bootsplash_logo.png
 android/app/src/main/res/mipmap-xxhdpi/bootsplash_logo.png
 android/app/src/main/res/mipmap-xxxhdpi/bootsplash_logo.png
 
-ios/RNBootSplashExample/BootSplash.storyboard
-ios/RNBootSplashExample/Images.xcassets/BootSplashLogo.imageset/bootsplash_logo.png
-ios/RNBootSplashExample/Images.xcassets/BootSplashLogo.imageset/bootsplash_logo@2x.png
-ios/RNBootSplashExample/Images.xcassets/BootSplashLogo.imageset/bootsplash_logo@3x.png
+ios/YourProjectName/BootSplash.storyboard
+ios/YourProjectName/Images.xcassets/BootSplashLogo.imageset/bootsplash_logo.png
+ios/YourProjectName/Images.xcassets/BootSplashLogo.imageset/bootsplash_logo@2x.png
+ios/YourProjectName/Images.xcassets/BootSplashLogo.imageset/bootsplash_logo@3x.png
 
 # Only if --assets-path was specified
 assets/bootsplash_logo.png
