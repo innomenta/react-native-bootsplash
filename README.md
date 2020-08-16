@@ -1,6 +1,6 @@
 # 🚀 react-native-bootsplash
 
-[![npm version](https://badge.fury.io/js/react-native-bootsplash.svg)](https://badge.fury.io/js/react-native-bootsplash) [![npm](https://img.shields.io/npm/dt/react-native-bootsplash.svg)](https://www.npmjs.org/package/react-native-bootsplash) ![Platform - Android and iOS](https://img.shields.io/badge/platform-Android%20%7C%20iOS-yellow.svg) ![MIT](https://img.shields.io/dub/l/vibe-d.svg) [![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
+[![npm version](https://badge.fury.io/js/react-native-bootsplash.svg)](https://badge.fury.io/js/react-native-bootsplash) [![npm](https://img.shields.io/npm/dt/react-native-bootsplash.svg)](https://www.npmjs.org/package/react-native-bootsplash) ![Platform - Android and iOS](https://img.shields.io/badge/platform-Android%20%7C%20iOS-yellow.svg) ![MIT](https://img.shields.io/dub/l/vibe-d.svg) [![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](https://github.com/prettier/)
 
 Show a bootsplash during app startup. Hide it when you are ready.
 
@@ -135,10 +135,10 @@ android/app/src/main/res/mipmap-xhdpi/bootsplash_logo.png
 android/app/src/main/res/mipmap-xxhdpi/bootsplash_logo.png
 android/app/src/main/res/mipmap-xxxhdpi/bootsplash_logo.png
 
-ios/RNBootSplashExample/BootSplash.storyboard
-ios/RNBootSplashExample/Images.xcassets/BootSplashLogo.imageset/bootsplash_logo.png
-ios/RNBootSplashExample/Images.xcassets/BootSplashLogo.imageset/bootsplash_logo@2x.png
-ios/RNBootSplashExample/Images.xcassets/BootSplashLogo.imageset/bootsplash_logo@3x.png
+ios/YourProjectName/BootSplash.storyboard
+ios/YourProjectName/Images.xcassets/BootSplashLogo.imageset/bootsplash_logo.png
+ios/YourProjectName/Images.xcassets/BootSplashLogo.imageset/bootsplash_logo@2x.png
+ios/YourProjectName/Images.xcassets/BootSplashLogo.imageset/bootsplash_logo@3x.png
 
 # Only if --assets-path was specified
 assets/bootsplash_logo.png
@@ -309,4 +309,4 @@ function App() {
 
 - It should not prevent you from seeing red screen errors.
 
-- Hiding the launch screen is configurable: fade it out with a custom duration or hide it without any animation at all (no fade needed if you want to animate it out!).
+- Hiding the launch screen is configurable: fade it out or hide it without any animation at all (no fade needed if you want to animate it out!).
