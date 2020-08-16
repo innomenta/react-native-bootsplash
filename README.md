@@ -307,6 +307,4 @@ function App() {
 
 - If `react-native-splash-screen` encourages you to display an image over your application, `react-native-bootsplash` way-to-go is to design your launch screen using platforms tools ([Xcode layout editor](https://developer.apple.com/library/archive/documentation/UserExperience/Conceptual/AutolayoutPG/) and [Android drawable resource](https://developer.android.com/guide/topics/resources/drawable-resource)).
 
-- It should not prevent you from seeing red screen errors.
-
-- Hiding the launch screen is configurable: fade it out or hide it without any animation at all (no fade needed if you want to animate it out!).
+* Hiding the launch screen is configurable: fade it out or hide it without any animation at all (no fade needed if you want to animate it out!).
