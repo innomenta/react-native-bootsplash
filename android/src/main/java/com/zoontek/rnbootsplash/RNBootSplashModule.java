@@ -2,10 +2,13 @@ package com.zoontek.rnbootsplash;
 
 import android.app.Activity;
 import android.content.DialogInterface;
+import android.graphics.drawable.BitmapDrawable;
+import android.os.Build;
 import android.view.Window;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.annotation.RequiresApi;
 import androidx.annotation.StyleRes;
 
 import com.facebook.react.bridge.LifecycleEventListener;
@@ -33,6 +36,8 @@ public class RNBootSplashModule extends ReactContextBaseJavaModule implements Li
   @Nullable private static Promise mPendingPromise = null;
   @Nullable private static RNBootSplashDialog mDialog = null;
 
+  private static BitmapDrawable mBitmapDrawable = null;
+
   public RNBootSplashModule(ReactApplicationContext reactContext) {
     super(reactContext);
     reactContext.addLifecycleEventListener(this);
@@ -43,10 +48,12 @@ public class RNBootSplashModule extends ReactContextBaseJavaModule implements Li
     return MODULE_NAME;
   }
 
-  static void init(@NonNull final Activity activity, final @StyleRes int themeResId) {
+  @RequiresApi(api = Build.VERSION_CODES.KITKAT)
+  static void init(@NonNull final Activity activity, final @StyleRes int themeResId, BitmapDrawable bitmapDrawable) {
     mThemeResId = themeResId;
+    mBitmapDrawable = bitmapDrawable;
 
-    mDialog = new RNBootSplashDialog(activity, themeResId);
+    mDialog = new RNBootSplashDialog(activity, themeResId, mBitmapDrawable);
     mDialog.show();
 
     activity.setTheme(R.style.BootSplashNullBackgroundTheme);
@@ -90,6 +97,7 @@ public class RNBootSplashModule extends ReactContextBaseJavaModule implements Li
     }
 
     UiThreadUtil.runOnUiThread(new Runnable() {
+      @RequiresApi(api = Build.VERSION_CODES.KITKAT)
       @Override
       public void run() {
         final Activity activity = getReactApplicationContext().getCurrentActivity();
@@ -103,7 +111,7 @@ public class RNBootSplashModule extends ReactContextBaseJavaModule implements Li
           return;
         }
 
-        mDialog = new RNBootSplashDialog(activity, mThemeResId);
+        mDialog = new RNBootSplashDialog(activity, mThemeResId, mBitmapDrawable);
         final Window window = mDialog.getWindow();
 
         if (window != null) {
