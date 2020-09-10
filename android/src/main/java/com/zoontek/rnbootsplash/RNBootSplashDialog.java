@@ -4,7 +4,8 @@ import android.app.Activity;
 import android.app.Dialog;
 import android.graphics.drawable.BitmapDrawable;
 import android.os.Build;
-import android.view.ViewGroup.LayoutParams;
+import android.util.DisplayMetrics;
+import android.view.Gravity;
 import android.view.Window;
 
 import androidx.annotation.NonNull;
@@ -23,8 +24,11 @@ class RNBootSplashDialog extends Dialog {
     final Window window = getWindow();
 
     if (window != null) {
-      window.setLayout(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT);
+      DisplayMetrics displayMetrics = new DisplayMetrics();
+      activity.getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
+      window.setLayout(displayMetrics.widthPixels, displayMetrics.heightPixels);
       window.setWindowAnimations(0);
+      window.setGravity(Gravity.TOP);
       window.setBackgroundDrawable(bitmapDrawable);
     }
   }
