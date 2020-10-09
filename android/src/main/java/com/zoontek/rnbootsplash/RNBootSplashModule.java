@@ -3,12 +3,10 @@ package com.zoontek.rnbootsplash;
 import android.app.Activity;
 import android.content.DialogInterface;
 import android.graphics.drawable.BitmapDrawable;
-import android.os.Build;
 import android.view.Window;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.annotation.RequiresApi;
 import androidx.annotation.StyleRes;
 
 import com.facebook.react.bridge.LifecycleEventListener;
@@ -48,7 +46,6 @@ public class RNBootSplashModule extends ReactContextBaseJavaModule implements Li
     return MODULE_NAME;
   }
 
-  @RequiresApi(api = Build.VERSION_CODES.KITKAT)
   static void init(@NonNull final Activity activity, final @StyleRes int themeResId, BitmapDrawable bitmapDrawable) {
     mThemeResId = themeResId;
     mBitmapDrawable = bitmapDrawable;
@@ -97,7 +94,6 @@ public class RNBootSplashModule extends ReactContextBaseJavaModule implements Li
     }
 
     UiThreadUtil.runOnUiThread(new Runnable() {
-      @RequiresApi(api = Build.VERSION_CODES.KITKAT)
       @Override
       public void run() {
         final Activity activity = getReactApplicationContext().getCurrentActivity();

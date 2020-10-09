@@ -13,7 +13,6 @@ import androidx.annotation.RequiresApi;
 import androidx.annotation.StyleRes;
 
 class RNBootSplashDialog extends Dialog {
-  @RequiresApi(api = Build.VERSION_CODES.KITKAT)
   RNBootSplashDialog(final @NonNull Activity activity, final @StyleRes int themeResId, BitmapDrawable bitmapDrawable) {
     super(activity, themeResId);
 
